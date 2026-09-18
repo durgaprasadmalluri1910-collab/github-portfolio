@@ -1,21 +1,84 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="TaskFlow AI turns everyday information into organized actions."><title>TaskFlow AI | Personal admin, handled</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="responsive.css"><link rel="stylesheet" href="views.css"><link rel="stylesheet" href="settings.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rohan Malluri's portfolio - 1st-year ECE student exploring AI, web development, and practical product ideas.">
+  <title>Rohan Malluri | B.Tech ECE Student</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<a class="skip-link" href="#main-content">Skip to content</a>
-<div class="app-shell">
-<aside class="sidebar" id="sidebar"><div class="brand"><span class="brand-mark">✦</span><span>TaskFlow <b>AI</b></span></div><div class="workspace-switcher"><span class="avatar">RM</span><span><strong>Rohan's space</strong><small>Personal workspace</small></span><span class="chevron">⌄</span></div>
-<nav class="main-nav" aria-label="Main navigation"><p class="nav-label">Workspace</p><a class="nav-item active" href="#dashboard" data-view="dashboard"><span>◈</span> Overview</a><a class="nav-item" href="#tasks" data-view="tasks"><span>✓</span> Tasks <em id="nav-task-count">8</em></a><a class="nav-item" href="#calendar" data-view="calendar"><span>▦</span> Calendar</a><a class="nav-item" href="#documents" data-view="documents"><span>□</span> Documents</a><a class="nav-item" href="#expenses" data-view="expenses"><span>◌</span> Expenses</a><p class="nav-label nav-label-spaced">Tools</p><a class="nav-item" href="#assistant" data-view="assistant"><span>✧</span> AI assistant <i class="new-dot"></i></a></nav>
-<div class="sidebar-bottom"><a class="nav-item" href="#settings" data-view="settings"><span>⚙</span> Settings</a><div class="upgrade-card"><span class="upgrade-icon">✦</span><strong>Make space for<br>what matters.</strong><small>Your personal admin, with a little intelligence.</small><button class="upgrade-link" type="button">Explore AI features <span>→</span></button></div><div class="profile"><span class="avatar avatar-small">RM</span><span><strong>Rohan Malluri</strong><small>Free workspace</small></span><button aria-label="Profile menu">•••</button></div></div></aside>
-<main id="main-content" class="main-content"><header class="topbar"><button class="mobile-menu" id="mobile-menu" aria-label="Open navigation">☰</button><div class="breadcrumbs"><span>Workspace</span><b>/</b><strong>Overview</strong></div><div class="topbar-actions"><button class="icon-button" aria-label="Search">⌕</button><button class="icon-button notification-button" aria-label="Notifications">♧<i></i></button><button class="capture-button" id="open-capture"><span>✦</span> Capture with AI <kbd>⌘ K</kbd></button></div></header>
-<div class="page-content" id="dashboard"><section class="welcome-row"><div><p class="date-label">FRIDAY, SEPTEMBER 18, 2026</p><h1>Good morning, Rohan <span>✦</span></h1><p class="welcome-subtitle">Here’s what needs your attention.</p></div><div class="focus-score"><div class="score-ring"><strong>72</strong><small>%</small></div><span><strong>Good momentum</strong><small>4 day streak · keep going</small></span></div></section>
-<section class="focus-grid" aria-label="Today's focus"><div class="focus-card overdue"><span class="focus-icon">!</span><span><small>Overdue</small><strong id="overdue-count">1</strong></span><span class="focus-arrow">↗</span></div><div class="focus-card today"><span class="focus-icon">◷</span><span><small>Due today</small><strong id="today-count">2</strong></span><span class="focus-arrow">↗</span></div><div class="focus-card upcoming"><span class="focus-icon">○</span><span><small>Upcoming</small><strong id="upcoming-count">5</strong></span><span class="focus-arrow">↗</span></div><div class="focus-card completed"><span class="focus-icon">✓</span><span><small>Completed</small><strong id="completed-count">12</strong></span><span class="focus-arrow">↗</span></div></section>
-<div class="content-grid"><section class="tasks-panel panel"><div class="panel-heading"><div><h2>Today’s tasks</h2><p id="task-summary">2 tasks need your attention</p></div><div class="view-actions"><button class="view-toggle active" aria-label="List view">☷</button><button class="view-toggle" aria-label="Grid view">⊞</button><button class="more-button" aria-label="More options">•••</button></div></div><div class="task-filters"><button class="filter-chip active" data-filter="all">All <span>8</span></button><button class="filter-chip" data-filter="today">Today <span>2</span></button><button class="filter-chip" data-filter="high">High priority <span>3</span></button><button class="filter-chip" data-filter="completed">Completed <span>12</span></button></div><div id="task-list" class="task-list"></div><button class="add-task" id="quick-add"><span>+</span> Add a task</button></section>
-<aside class="right-rail"><section class="daily-plan panel"><div class="panel-heading"><div><p class="eyebrow">✦ AI DAILY PLAN</p><h2>Your day, in focus.</h2></div><button class="more-button" aria-label="Plan options">•••</button></div><p class="plan-copy">Start with your physics assignment. It’s due tomorrow, and a focused hour now will make the rest of your day lighter.</p><div class="plan-divider"></div><div class="plan-stat"><span class="stat-icon red">!</span><span><strong>1 urgent task</strong><small>Needs your attention today</small></span></div><div class="plan-stat"><span class="stat-icon amber">◷</span><span><strong>2 important tasks</strong><small>Deadlines coming up soon</small></span></div><button class="text-button" id="refresh-plan">Refresh my plan <span>↗</span></button></section><section class="capture-prompt"><div class="prompt-spark">✦</div><h3>Something on your mind?</h3><p>Drop in a message, bill, screenshot, or document. I’ll turn it into a plan.</p><button class="outline-button" id="open-capture-rail">Capture anything <span>→</span></button></section></aside></div>
-<section class="bottom-grid"><section class="activity-panel panel"><div class="panel-heading"><div><p class="eyebrow">RECENT ACTIVITY</p><h2>Small wins add up.</h2></div><button class="text-button">View all <span>→</span></button></div><div class="activity-list"><div class="activity-item"><span class="activity-symbol mint">✓</span><span><strong>Completed “Buy engineering sheets”</strong><small>Today, 9:42 AM · Shopping</small></span><b>+10</b></div><div class="activity-item"><span class="activity-symbol lilac">✦</span><span><strong>AI created 2 tasks from a message</strong><small>Yesterday, 6:18 PM · AI Capture</small></span><b>+8</b></div><div class="activity-item"><span class="activity-symbol peach">↗</span><span><strong>Added “College circular”</strong><small>Yesterday, 4:05 PM · Documents</small></span><b>+5</b></div></div></section><section class="quote-card"><span>“</span><p>The secret of getting ahead is getting started.</p><small>— Mark Twain</small><div class="quote-lines"></div></section></section></div></main></div>
-<nav class="mobile-nav" aria-label="Mobile navigation"><a class="active" href="#dashboard"><span>◈</span>Home</a><a href="#tasks"><span>✓</span>Tasks</a><button id="mobile-capture" aria-label="Capture with AI">✦</button><a href="#calendar"><span>▦</span>Calendar</a><a href="#assistant"><span>✧</span>Assistant</a></nav>
-<div class="modal-backdrop" id="capture-modal" hidden><section class="capture-modal" role="dialog" aria-modal="true" aria-labelledby="capture-title"><button class="modal-close" id="close-capture" aria-label="Close capture">×</button><div class="modal-heading"><span class="modal-spark">✦</span><p class="eyebrow">AI CAPTURE</p><h2 id="capture-title">Turn the messy stuff<br><em>into next steps.</em></h2><p>Paste a message, jot down a thought, or upload a file. I’ll find the actions hiding inside.</p></div><div class="capture-tabs"><button class="capture-tab active" data-capture-tab="write">✎ <span>Write or paste</span></button><button class="capture-tab" data-capture-tab="upload">↑ <span>Upload a file</span></button></div><div class="capture-body" id="write-panel"><textarea id="capture-input" placeholder="Try: I need to submit my physics assignment by Monday and pay the electricity bill of ₹1,842 by September 24..."></textarea><div class="textarea-footer"><span>⌘ Enter to create</span><span id="char-count">0 / 2,000</span></div></div><div class="capture-body upload-body" id="upload-panel" hidden><div class="drop-zone"><span>↑</span><strong>Drop a document or image here</strong><small>PDF, JPG, PNG, or DOCX · up to 10 MB</small><label class="outline-button">Browse files<input type="file" accept=".pdf,.jpg,.jpeg,.png,.docx"></label></div></div><div class="modal-footer"><span class="privacy-note">◉ Your information stays in your workspace.</span><button class="capture-button" id="analyze-capture"><span>✦</span> Organize with AI <kbd>⌘ ↵</kbd></button></div></section></div><div class="toast" id="toast" role="status"></div><script src="script.js"></script>
-</body></html>
+  <a class="skip-link" href="#top">Skip to main content</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Rohan Malluri home"><span class="brand-mark">R</span><span>rohan<span class="brand-dot">.</span></span></a>
+    <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span></button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme"><span class="theme-icon">☼</span></button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section-wrap">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="eyebrow-line"></span> B.Tech 1st Year • ECE</p>
+        <h1>I’m building<br><em>AI-powered</em> ideas<br>for everyday life.</h1>
+        <p class="hero-intro">I’m Rohan Malluri, a 1st-year ECE student at V.R. Siddhartha Engineering College, learning C programming, AI, web development, and product thinking while building tools that help local communities.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">Explore my work <span>↘</span></a>
+          <a class="text-link" href="#contact">Let’s talk <span>→</span></a>
+        </div>
+      </div>
+      <div class="hero-art reveal">
+        <div class="art-orbit orbit-one"></div>
+        <div class="art-orbit orbit-two"></div>
+        <div class="art-sun"></div>
+        <div class="art-note note-top">curiosity<br>over comfort</div>
+        <div class="art-note note-bottom">design / code<br>/ repeat</div>
+        <div class="art-label">scroll to<br>explore <span>↓</span></div>
+      </div>
+    </section>
+
+    <section class="marquee" aria-label="Skills">
+      <div class="marquee-track"><span>C PROGRAMMING</span><b>✳</b><span>COMMUNICATION</span><b>✳</b><span>FRONTEND DEVELOPMENT</span><b>✳</b><span>AI LEARNING</span><b>✳</b><span>CREATIVE PROBLEM SOLVING</span><b>✳</b></div>
+    </section>
+
+    <section class="work section-wrap" id="work">
+      <div class="section-heading reveal"><div><p class="eyebrow"><span class="eyebrow-line"></span> Selected work</p><h2>A few things<br><em>I’ve made.</em></h2></div><p class="section-aside">A collection of experiments, collaborations,<br>and products built with care.</p></div>
+      <div class="filter-bar" role="group" aria-label="Filter projects">
+        <button class="filter-button active" data-filter="all">All work</button><button class="filter-button" data-filter="development">Development</button><button class="filter-button" data-filter="design">Design</button>
+      </div>
+      <div class="project-grid">
+        <article class="project-card project-wide reveal" data-category="development">
+          <div class="project-image image-aurora"><div class="browser-window"><div class="browser-bar"><i></i><i></i><i></i><span>ShopFlow AI</span></div><div class="browser-content"><strong>Local shops,<br>online growth.</strong><div class="sound-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div></div>
+          <div class="project-info"><div><p class="project-number">01 / 03</p><h3>ShopFlow AI</h3><p>Problem: many local shops had loyal customers and reviews, but no online presence to grow their business. I collected their details and built a website using Replit, helping them present their business online. Result: they were happy with the work.</p></div><span class="project-arrow">↗</span></div>
+        </article>
+        <article class="project-card reveal" data-category="design">
+          <div class="project-image image-nomad"><div class="nomad-copy">learn<br><em>build</em></div><div class="nomad-stamp">AI / 24</div></div>
+          <div class="project-info"><div><p class="project-number">02 / 03</p><h3>AI Learning</h3><p>Exploring practical AI tools, workflows, and creative problem-solving.</p></div><span class="project-arrow">↗</span></div>
+        </article>
+        <article class="project-card reveal" data-category="development">
+          <div class="project-image image-loom"><div class="loom-shape"></div><span class="loom-word">student.</span><span class="loom-caption">building with curiosity</span></div>
+          <div class="project-info"><div><p class="project-number">03 / 03</p><h3>Student Tribe</h3><p>Learning, experimenting, and building projects that connect technology with real-life use.</p></div><span class="project-arrow">↗</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="about section-wrap" id="about">
+      <div class="about-image reveal"><div class="portrait-glow"></div><div class="portrait-card"><span>hello, I’m<br><strong>Rohan</strong></span><small>ECE student / learner</small></div></div>
+      <div class="about-copy reveal"><p class="eyebrow"><span class="eyebrow-line"></span> A little about me</p><h2>Learning, building,<br>and <em>solving real problems.</em></h2>      <p>I’m a B.Tech 1st-year ECE student who enjoys learning new technologies, especially C programming, AI, and web development. I like turning practical ideas into small digital solutions that make everyday tasks easier.</p><p>Right now, I’m focused on AI skills, creative problem-solving, and building projects that can help people in my city and campus community.</p><a class="text-link" href="#contact">More about me <span>→</span></a></div>    </section>
+
+    <section class="contact section-wrap" id="contact">
+      <div class="contact-inner reveal"><p class="eyebrow"><span class="eyebrow-line"></span> Have a project in mind?</p><h2>Let’s make something<br><em>worth remembering.</em></h2><a class="email-link" href="mailto:durgaprasadmalluri1910@gmail.com">durgaprasadmalluri1910@gmail.com <span>↗</span></a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-wrap"><span>© 2026 MALLURI SRI NAGA SAI ROHAN</span><div><a href="https://github.com/durgaprasadmalluri1910-collab/github-portfolio" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/in/" target="_blank" rel="noreferrer">LinkedIn</a><a href="#top">Back to top ↑</a></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
